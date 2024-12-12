@@ -51,7 +51,7 @@ CORS_ORIGIN_ALLOW_ALL = True
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
-    #'whitenoise.middleware.WhiteNoiseMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -141,7 +141,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / "staticfiles"
-"staticfiles"= { "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage", }
+"staticfiles"= "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 
 # Default primary key field type
